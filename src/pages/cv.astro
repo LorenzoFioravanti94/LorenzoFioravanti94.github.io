@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Data/Analytics Engineer with hands-on experience developing and maintaining ELT data transformations in SQL and dbt
+    within a production analytics environment. I come from a software engineering background and apply engineering
+    practices — version control, testing and modular code — to analytics work in international, agile teams. I also have
+    experience building datasets and predictive models on genomic data, relevant to scientific and biotech domains.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Data Analyst — SDG Group"
+      subtitle="Oct 2025 – Mar 2026 · Barcelona, Spain"
+    >
+      <ul class="list-disc ml-6 grid gap-1">
+        <li>Modified and extended existing dbt models in SQL to meet reporting requirements.</li>
+        <li>Investigated and resolved data-quality issues with diagnostic queries in Snowflake and Databricks.</li>
+        <li>Resolved user tickets in a SCRUM team, collaborating with international clients.</li>
+        <li>Used Git and Azure DevOps for version control, and Jira for issue tracking in an Agile workflow.</li>
+        <li>Worked within an established dimensional model (star schema) supporting analytics and reporting.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Erasmus+ Trainee — Computer Vision Center, Universitat Autònoma de Barcelona"
+      subtitle="Sep 2024 – Apr 2025 · Barcelona, Spain"
+    >
+      <ul class="list-disc ml-6 grid gap-1">
+        <li>
+          Built a full-stack image-annotation tool (Python, Django, JavaScript, SQLite) to produce training data for
+          object-detection models.
+        </li>
+        <li>Contributed to the Framework for Comics Datasets (CoMix) project.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Student Intern — ISPRO, Institute for Study, Prevention and Oncological Network"
+      subtitle="Nov 2022 – Jan 2023 · Florence, Italy"
+    >
+      <ul class="list-disc ml-6 grid gap-1">
+        <li>
+          Built ML-ready datasets from RNA-sequencing data and Ensembl genome-browser files to study APOBEC1-induced RNA
+          editing (PostgreSQL; structured JSON generation in Java).
+        </li>
+        <li>Built and evaluated predictive models (LightGBM) on the resulting genomic data.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BSc in Computer Engineering"
+      subtitle="University of Florence, Italy · 97/110"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <div class="mb-3 text-justify">
+    Machine Learning Specialization — Stanford Online / DeepLearning.AI (Coursera):
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a
+        href="https://www.coursera.org/account/accomplishments/verify/PN5C6EV4DQU7"
+        target="_blank"
+        class="link link-hover"
+      >
+        Supervised Machine Learning: Regression and Classification
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.coursera.org/account/accomplishments/verify/GGLIEQRZDFM6"
+        target="_blank"
+        class="link link-hover"
+      >
+        Advanced Learning Algorithms
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.coursera.org/account/accomplishments/verify/IG4UN6DZ0OCQ"
+        target="_blank"
+        class="link link-hover"
+      >
+        Unsupervised Learning, Recommenders, Reinforcement Learning
+      </a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-2 mx-6 mb-10">
+    <li>SQL</li>
+    <li>Python</li>
+    <li>Jinja</li>
+    <li>dbt</li>
+    <li>Snowflake</li>
+    <li>Databricks</li>
+    <li>DuckDB</li>
+    <li>Dagster</li>
+    <li>GitHub Actions</li>
+    <li>Git</li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Languages</div>
+  </div>
+
+  <ul class="list-disc md:columns-2 columns-2 mx-6">
+    <li>Italian — Native</li>
+    <li>Spanish — Advanced</li>
+    <li>English — Advanced</li>
+    <li>Catalan — Basic</li>
+  </ul>
+</BaseLayout>

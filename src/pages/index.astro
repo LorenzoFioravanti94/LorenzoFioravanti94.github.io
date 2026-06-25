@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import brazilPipeline from "../assets/brazil-ecommerce-pipeline.png";
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Lorenzo Fioravanti</div>
+    <div class="text-3xl py-3 font-bold">Analytics Engineer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        I'm an Analytics Engineer based in Barcelona who came to data from software engineering — and I bring that
+        background with me. I build analytics pipelines the way good software is built: version-controlled, tested and
+        modular.
+      </text>
+    </div>
+    <div class="py-2">
+      <text class="text-lg">
+        This portfolio is built around one idea: a modern data stack can be <b>entirely open-source</b> — reproducible,
+        vendor-neutral and cost-efficient — without giving up engineering rigor. That's a deliberate engineering choice,
+        not a compromise. Alongside it, I've also worked hands-on with enterprise cloud platforms in a production
+        environment.
+      </text>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Featured project</div>
+  </div>
+
+  <HorizontalCard
+    title="Brazilian E-Commerce & Socioeconomic Context"
+    img={brazilPipeline}
+    desc="An end-to-end analytics engineering pipeline exploring how a Brazilian state's socioeconomic context shapes its e-commerce experience — joining ~100k real Olist orders with public IBGE indicators. Built on a Medallion architecture and delivered as a snowflake dimensional model. Runs entirely on a free, local, open-source stack — no cloud warehouse, fully reproducible end-to-end."
+    url="https://github.com/LorenzoFioravanti94/brazil-ecommerce-analytics"
+    tech={["dbt Core", "DuckDB", "Dagster", "Python", "SQL", "GitHub Actions"]}
+  />
+</BaseLayout>
