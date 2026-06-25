@@ -9,14 +9,23 @@ const { sideBarActiveItemID } = Astro.props;
   <label for="my-drawer" class="drawer-overlay"></label>
   <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
     <div class="w-fit mx-auto mt-5 mb-6">
-      <a href="/">
+      <label for="profile-modal" class="cursor-pointer" aria-label="View profile photo larger">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
           <div class="w-[8.5rem]">
             <Image class="mask mask-circle" format="webp" width={300} height={300} src={profileImage} alt="Lorenzo Fioravanti" />
           </div>
         </div>
-      </a>
+      </label>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
   </aside>
+</div>
+
+<!-- Profile photo lightbox: opens on click, closes on outside click; no navigation, keeps the current page -->
+<input type="checkbox" id="profile-modal" class="modal-toggle" />
+<div class="modal" role="dialog" aria-label="Profile photo">
+  <div class="modal-box p-0 bg-transparent shadow-none w-fit max-w-[90vw] sm:max-w-md overflow-visible">
+    <Image class="rounded-2xl w-full h-auto shadow-2xl" format="webp" width={500} src={profileImage} alt="Lorenzo Fioravanti" />
+  </div>
+  <label class="modal-backdrop" for="profile-modal">Close</label>
 </div>
